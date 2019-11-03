@@ -1,0 +1,29 @@
+<table class="data-table">
+    <thead>
+        <tr>
+            <td></td>
+            <td *ngFor="let column of headerData">
+                {{column.label}}
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rowItem of tableData; let i = index">
+            <td>
+                <div class="cell-editor">
+                    <div class="edit-btn">
+                        <button (click)="editRow(i, 'true')">Edit</button>
+                    </div>
+                    <div class="del-btn">
+                        <button (click)="editRow(i, 'false')">Del</button>
+                    </div>
+                </div>
+            </td>
+            <td *ngFor="let col of headerData">
+                <div class="editable-field">
+                    {{rowItem[col.field]}}
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

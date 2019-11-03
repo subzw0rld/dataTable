@@ -1,0 +1,30 @@
+.data-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.data-table * {
+    box-sizing: border-box;
+}
+
+.data-table thead {
+    background-color: #F4F4F4;
+}
+
+.data-table td {
+    border: 1px solid #C8C8C8;
+}
+
+.data-table td {
+    padding: 0.571em 0.857em;
+}
+
+.cell-editor {
+    display: flex;
+}
+
+.editable-field[contenteditable="true"] {
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    padding: 0.429rem;
+}
